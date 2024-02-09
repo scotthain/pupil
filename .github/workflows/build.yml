@@ -1,0 +1,13 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: node:lts
+    steps:
+    - uses: actions/checkout@v4
+    - name: Did we node
+      run: |
+        npm --version
